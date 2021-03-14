@@ -1,23 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <title>eShop</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trash_goods</title>
+    <link rel="stylesheet" href="style.css">
 
+</head>
 <body>
-  <div class="conteiner">
-    <header>
-      <button class="cart-button" type="button">Корзина</button>
-    </header>
     <main>
-      <div class="logo"><h1>Logo</h1></div>
-      <div class="goods-list"></div>
+      <div class="container">
+        <div class="header">
+          <button class="cart-button button" type="button" id="basket-btn">Корзина</button>
+        </div>
+        <section class="product-card-section">
+            <a class="product-card-section__box" href="#" target="blanck">
+                <aside>
+                    <img src="img/trash.jpg" alt="товар_1" height="370">
+                    <button class="product-card-section_btn-order" data-product-name='Guitar_1' onclick="addItemToCart()">Заказать</button>
+                    <div class="product-card-section__box__icons"></div>
+                    <p>Гитара</p>
+                    <span>Заказать у нас Гитару</span>
+                </aside>
+            </a>
+            <a class="product-card-section__box" href="#" target="blanck">
+                <aside>
+                    <img src="img/trash.jpg" alt="Товар_2" height="370">
+                    <button class="product-card-section_btn-order" data-product-name='Bass_Guitar' onclick="addItemToCart()">Заказать</button>
+                    <div class="product-card-section__box__icons"></div>
+                    <p>Бас Гитара</p>
+                    <span>Заказать у нас Бас Гитару</span>
+                </aside>
+            </a>
+            <a class="product-card-section__box" href="#" target="blanck">
+                <aside>
+                    <img src="img/trash.jpg" alt="Товар_3" height="370">
+                    <button class="product-card-section_btn-order" data-product-name='D_dario' onclick="addItemToCart()">Заказать</button>
+                    <div class="product-card-section__box__icons"></div>
+                    <p>Струны</p>
+                    <span>Заказать у нас Струны</span>
+                </aside>
+            </a>
+        </section>
+
     </main>
+
+    <div id="goods-list-section" class="goods-list">
+        <div id="goods-list-section__modal">
+            <input type="submit" value="Закрыть корзину" id="goods-list-section__delete">
+            <h3 id="goods-list_head-line">Корзина</h3>
+            <div id="goods-list__product-box"></div>
+            <p id="goods-list__total"></p>
+        </div>
     </div>
-  <script src="script.js"></script>
+
+      </div>
+
+
+    <script src="script/goods_list.js" defer></script>
+
 </body>
 </html>
