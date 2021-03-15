@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trash_goods</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
@@ -13,7 +13,29 @@
       <div class="container">
         <div class="header">
           <button class="cart-button button" type="button" id="basket-btn">Корзина</button>
+          <button class="registrator-button button" type="button" id="registrator">Регистрация</button>
+          <div class="opentrash"></div>
+          <div class="modal">
+                <h2> Форма обратной связи </h2>
+                <form name="regform" onsubmit="return formValidation(event)">
+                    <p >Имя:
+                        <input type="text" size=65 name="name" class="form-box__area"></p><br>
+                        <span class="error-text form-box__area"></span>
+                    <p>E-mail:
+                        <input type="text" size=65 name="email" class="form-box__area"> </p><br>
+                        <span class="error-text form-box__area"></span>
+                    <p>Телефон:
+                        <input type="text" size=65 name="telephone" onclick="this.value=''" value="+7(000)000-0000" class="form-box__area"> </p><br>
+                        <span class="error-text form-box__area"></span>
+                    <p> Комментарий:
+                        <textarea cols="60" name="comment" class="form-box__area"> </textarea></p>
+                    <p>
+                        <input type="submit" value="Отправить" name="submitButton">
+                    </p>
+                    <h2 id="form-box__area__headline"></h2>
+                </form>
         </div>
+
         <section class="product-card-section">
             <a class="product-card-section__box" href="#" target="blanck">
                 <aside>
@@ -59,6 +81,7 @@
 
 
     <script src="script/goods_list.js" defer></script>
+    <script src="script/registration.js" defer></script>
 
 </body>
 </html>
