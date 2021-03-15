@@ -152,7 +152,7 @@ main .product-card-section a.product-card-section__box:active .product-card-sect
 
 @media only screen and (min-width: 590px) {
   main .product-card-section {
-    padding-top: 1rem;
+    padding-top: 3rem;
   }
   main .product-card-section a.product-card-section__box {
     margin: 0rem .1rem;
@@ -326,4 +326,53 @@ body button {
 
 .goods-list__product-box__price {
   padding: 25px;
+}
+
+.modal {
+  padding: 55px;
+  width: 600px;
+  height: 600px;
+  background-color: #ccc;
+  border: 1px solid #555;
+  border-radius: 4px;
+  box-shadow: 5px 5px 10px #222;
+  position: absolute;
+  left: calc(63% - 150px);
+  top: 55px;
+  display: none;
+  z-index: 2;
+}
+
+.modal p {
+  font-family: Raleway, Georgia, serif;
+  padding-top: 30px;
+}
+
+
+.active {
+  display: block;
+  animation: popup 4s;
+}
+
+.opentrash {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  opacity: .3;
+  background-color: grey;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+@keyframes popup {
+  0% {
+    top: -300px;
+  }
+  100%{
+    opacity: 2;
+  }
+}
+.error-text {
+  color: red;
 }

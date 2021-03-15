@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.box-next-ex {
+  text-align: center;
+  font-size: 22px;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid grey;
+  width: 800px;
+  margin: 100px auto;
+  height: 600px;
+  position: relative;
+}
